@@ -1,4 +1,4 @@
-import random
+import random 
 import datetime
 
 num_of_alphabet = 26
