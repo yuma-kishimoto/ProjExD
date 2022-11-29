@@ -2,7 +2,6 @@ import tkinter as tk
 import tkinter.messagebox as tkm
 import math
 
-
 def button_click(event):
     btn = event.widget
     i = btn["text"]
