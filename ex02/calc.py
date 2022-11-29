@@ -66,15 +66,16 @@ for i in range(9,-1,-1):
         r += 1
         c = 0
 
-button = tk.Button(root, text = f".", width=4, height=2, font = ("", 30))
-button.grid(row = 5, column = 1)
-button.bind("<1>",button_click)
-button = tk.Button(root, text = f"%", width=4, height=2, font = ("", 30))
-button.grid(row = 5, column = 2)
-button.bind("<1>",button_click)
-button = tk.Button(root, text = f"=", width=4, height=2, font = ("", 30), bg= "blue", fg = "white")
-button.grid(row = 5, column = 3)
-button.bind("<1>",button_click)
+A = 1
+B = 5
+KEI = [".","%","="]
+
+for C in KEI:
+    button = tk.Button(root, text = f"{C}", width=4, height=2, font = ("", 30))
+    button.grid(row = B, column = A)
+    button.bind("<1>",button_click)
+    A += 1
+ 
 
 n = 1
 m = 3
