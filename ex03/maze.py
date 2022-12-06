@@ -29,7 +29,6 @@ def main_proc():
             mx += 1
         if key == "Right":
             mx -= 1
-    #if cx == ax and cy == ay:
 
     cx, cy = mx*50 + 25, my*50 + 25
 
@@ -40,13 +39,10 @@ def main_proc():
     root.after(100, main_proc)
 
 
-#def goal(event):
- #   pass
 
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("迷えるこうかとん")
-    #canvas = tk.Canvas(root, width = 750, height = 450, bg = "black")
     canvas = tk.Canvas(root, width = 1500, height = 900, bg = "black")
     canvas.pack()
     
@@ -71,6 +67,5 @@ if __name__ == "__main__":
     root.bind("<KeyRelease>", key_up)
 
 
-    #tkm.showwarning("Help!!","こうかとんを助けてあげよう!!")
     main_proc()
     root.mainloop()
