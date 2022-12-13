@@ -141,7 +141,7 @@ def main():
         scrn_sfc.blit(bomb1_sfc, bomb1_rct)
 
         pg.display.update()
-        clock.tick(10000)
+        clock.tick(1000)
 
 if __name__ == "__main__":
     pg.init()
