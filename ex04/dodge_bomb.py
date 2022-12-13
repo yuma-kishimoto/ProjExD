@@ -14,13 +14,12 @@ def check_bound(obj_rct, scr_rct):
 
     return yoko,tate
 
-
 def main():
     clock = pg.time.Clock()
 
     #ここにゲームの処理かく　Ctrl+F5
     pg.display.set_caption("逃げろこうかとん")
-    scrn_sfc = pg.display.set_mode((1400,650))
+    scrn_sfc = pg.display.set_mode((1350,650))
     scrn_rct = scrn_sfc.get_rect()
     pgbg_sfc = pg.image.load("fig/pg_bg.jpg")
     pgbg_rct = pgbg_sfc.get_rect()
@@ -30,7 +29,6 @@ def main():
     tori_rct = tori_sfc.get_rect()
     tori_rct.center = 900, 400
     scrn_sfc.blit(tori_sfc, tori_rct)
-
 
     m1,m2 = 20,20
     bomb_sfc = pg.image.load("fig/Dai.png")
@@ -50,15 +48,13 @@ def main():
 
     vx, vy, = +1, +1
 
-
     ban_sfc = pg.image.load("fig/ban.png")
     ban_sfc = pg.transform.rotozoom(ban_sfc, 0, 2.0)
     ban_rct = ban_sfc.get_rect()
     ban_rct.center = tori_rct.centerx, tori_rct.centery
     scrn_sfc.blit(ban_sfc, ban_rct)
 
-    nx,ny = -1,-1
-
+    nx,ny = -1.2,-1.2
 
     while True:
         scrn_sfc.blit(pgbg_sfc, pgbg_rct)
