@@ -100,9 +100,11 @@ def check_bound(obj_rct, scr_rct):
     範囲内：+1／範囲外：-1
     """
     yoko, tate = +1, +1
-    if obj_rct.left < scr_rct.left or scr_rct.right < obj_rct.right:
+    if (obj_rct.left < scr_rct.left or
+       scr_rct.right < obj_rct.right):
         yoko = -1
-    if obj_rct.top < scr_rct.top or scr_rct.bottom < obj_rct.bottom:
+    if (obj_rct.top < scr_rct.top or
+       scr_rct.bottom < obj_rct.bottom):
         tate = -1
     return yoko, tate
 
@@ -116,7 +118,7 @@ def main():
 
     # 練習１
     scr = Screen("逃げろ！こうかとん", (1330,700), "fig/pg_bg.jpg")
-    ken = Sord("fig/kenmini.png", 1.0, (random.randint(0, scr.rct.width),random.randint(0, scr.rct.height)))
+    ken = Sord("fig/kenmini.png", 1.0, (random.randint(0, scr.rct.width), random.randint(0, scr.rct.height)))
     ken.update(scr)
 
     # 練習３
@@ -161,6 +163,7 @@ def main():
                 delbkdn.append(i)
                 bkdn.update(scr)
 
+        #追加出来なかった文字表示機能
         for w in delbkdn:
             bkdn_lst.pop(w)
             if len(delbkdn) == 5:
